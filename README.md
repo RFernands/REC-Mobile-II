@@ -7,6 +7,6 @@ O presente desafio consiste em elaborar, individualmente, um aplicativo Android 
 
 Documentação: https://www.themealdb.com/api.php   
 Informações a serem apresentadas:  
-Lista das refeições mais recentes  
-Detalhes das refeições  
-Refeições de forma aleatória
+  -Lista das refeições mais recentes  
+  -Detalhes das refeições  
+  -Refeições de forma aleatória
