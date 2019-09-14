@@ -15,18 +15,16 @@ class MealsListActivity : AppCompatActivity(), MealsListContract.View {
         setContentView(R.layout.activity_meals_list)
 
         val presenter: MealsListContract.Presenter = MealsListPresenter(this)
-        presenter.RandomMeals()
+        presenter.LatestMeals()
     }
 
     override fun showMessage(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
     }
 
+
     override fun showList(meals: List<Meal>){
-        val adapter = MealsListAdapter(this, meals){
-            val presenter: MealsListContract.Presenter = MealsListPresenter(this)
-            presenter.RandomMeals()
-        }
+        val adapter = MealsListAdapter(this, meals)
 
         rvMeals.adapter = adapter
         rvMeals.layoutManager = LinearLayoutManager(this)

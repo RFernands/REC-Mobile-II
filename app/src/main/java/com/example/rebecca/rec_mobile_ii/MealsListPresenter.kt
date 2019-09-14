@@ -8,10 +8,10 @@ import retrofit2.Response
 
 class MealsListPresenter(val view: MealsListContract.View) : MealsListContract.Presenter {
 
-    override fun RandomMeals(){
+    override fun LatestMeals(){
         val mealsService = RetrofitInicializer().createMealsService()
 
-        val call = mealsService.getRandomMeals()
+        val call = mealsService.getLatestMeals()
 
         call.enqueue(object : Callback<MealList> {
             override fun onFailure(call: Call<MealList>, t: Throwable) {

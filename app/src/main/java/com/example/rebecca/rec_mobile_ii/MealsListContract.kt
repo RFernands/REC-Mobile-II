@@ -10,7 +10,7 @@ interface MealsListContract {
     }
 
     interface Presenter {
-        //fun LatestMeals()
-        fun RandomMeals()
+        fun LatestMeals()
+        //fun RandomMeals()
     }
 }

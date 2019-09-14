@@ -8,15 +8,15 @@ import com.xwray.groupie.kotlinandroidextensions.Item
 import com.xwray.groupie.kotlinandroidextensions.ViewHolder
 import kotlinx.android.synthetic.main.item_meal.view.*
 
-class MealsListAdapter(val context: Context, val meal: List<Meal>, val itemClickListener: ((meal: Meal) -> Unit)): GroupAdapter<ViewHolder>() {
-
+class MealsListAdapter(private val context: Context, meals: List<Meal>): GroupAdapter<ViewHolder>() {
+//, val itemClickListener: ((meal: Meal) -> Unit)
     init {
-        meal.forEach {
+        meals.forEach {
             add(MealItem(it))
         }
     }
 
-    inner class MealItem(val meal: Meal) : Item() {
+    private inner class MealItem(val meal: Meal) : Item() {
 
         override fun bind(viewHolder: ViewHolder, position: Int) {
 
@@ -27,9 +27,9 @@ class MealsListAdapter(val context: Context, val meal: List<Meal>, val itemClick
                 .centerCrop()
                 .into(viewHolder.containerView.imgMeal)
 
-            viewHolder.containerView.setOnClickListener {
-                itemClickListener(meal)
-            }
+            //viewHolder.containerView.setOnClickListener {
+              //  itemClickListener(meal)
+            //}
         }
 
         override fun getLayout(): Int = R.layout.item_meal
