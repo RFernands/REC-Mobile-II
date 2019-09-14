@@ -8,7 +8,7 @@ import com.xwray.groupie.kotlinandroidextensions.Item
 import com.xwray.groupie.kotlinandroidextensions.ViewHolder
 import kotlinx.android.synthetic.main.item_meal.view.*
 
-class MealsListAdapter(val context: Context, val meal: List<Meal>, val itemClickListener: ((index: Int) -> Unit)): GroupAdapter<ViewHolder>() {
+class MealsListAdapter(val context: Context, val meal: List<Meal>, val itemClickListener: ((meal: Meal) -> Unit)): GroupAdapter<ViewHolder>() {
 
     init {
         meal.forEach {
@@ -28,7 +28,7 @@ class MealsListAdapter(val context: Context, val meal: List<Meal>, val itemClick
                 .into(viewHolder.containerView.imgMeal)
 
             viewHolder.containerView.setOnClickListener {
-                itemClickListener(position)
+                itemClickListener(meal)
             }
         }
 
