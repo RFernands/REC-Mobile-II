@@ -7,6 +7,8 @@ interface MealsListContract {
     interface View{
         fun showMessage(msg: String)
         fun showList(meals: List<Meal>)
+        fun showLoading()
+        fun hideLoading()
     }
 
     interface Presenter {

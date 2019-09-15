@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ProgressBar
 import android.widget.Toast
 import com.example.rebecca.rec_mobile_ii.entities.Meal
 import kotlinx.android.synthetic.main.activity_meals_list.*
@@ -49,6 +50,13 @@ class MealsListActivity : AppCompatActivity(), MealsListContract.View {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
     }
 
+    override fun showLoading() {
+        pbLoading.visibility = ProgressBar.VISIBLE
+    }
+
+    override fun hideLoading() {
+        pbLoading.visibility = ProgressBar.INVISIBLE
+    }
 
     override fun showList(meals: List<Meal>){
         val adapter = MealsListAdapter(this, meals){
