@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context=".MealsListActivity"
+              tools:context=".scenarios.meals_list.MealsListActivity"
               android:layout_marginLeft="16dp"
               android:layout_marginRight="16dp"
               android:layout_marginBottom="6dp">
@@ -29,10 +29,17 @@
                 android:layout_gravity="center_horizontal"
                 android:visibility="invisible"/>
 
-        <android.support.v7.widget.RecyclerView
-                android:id="@+id/rvMeals"
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefresh"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/item_meal"/>
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvMeals"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/item_meal"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
     </FrameLayout>
 </LinearLayout>

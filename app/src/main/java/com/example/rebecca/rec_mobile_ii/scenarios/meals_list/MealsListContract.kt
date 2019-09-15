@@ -1,4 +1,4 @@
-package com.example.rebecca.rec_mobile_ii
+package com.example.rebecca.rec_mobile_ii.scenarios.meals_list
 
 import com.example.rebecca.rec_mobile_ii.entities.Meal
 

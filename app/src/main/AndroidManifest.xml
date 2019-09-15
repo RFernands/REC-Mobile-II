@@ -12,13 +12,13 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MealsListActivity">
+        <activity android:name=".scenarios.meals_list.MealsListActivity">
         </activity>
-        <activity android:name=".MealDetailsActivity">
+        <activity android:name=".scenarios.meal_details.MealDetailsActivity">
         </activity>
-        <activity android:name=".MealsListAdapter">
+        <activity android:name=".scenarios.meals_list.MealsListAdapter">
         </activity>
-        <activity android:name=".SplashActivity"
+        <activity android:name=".scenarios.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
