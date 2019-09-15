@@ -1,12 +1,12 @@
 # REC-Mobile-II
 
-O presente desafio consiste em elaborar, individualmente, um aplicativo Android que obtenha informações a partir de uma das bases de dados listadas abaixo apresentando-as de forma simples e acessível, seguindo padrões de usabilidade da plataforma. O objetivo é analisar o conhecimento desenvolvido pelo(a) aluno(a) durante o semestre.
+O presente desafio consiste em elaborar, individualmente, um aplicativo Android que obtenha informações a partir de uma bases de dados apresentando-as de forma simples e acessível, seguindo padrões de usabilidade da plataforma.  
+
+Banco de dados escolhido:  
+*TheMealDB*	https://www.themealdb.com/api.php  
+
+O aplicativo apresenta as refeições mais recentes e refeições aleatórias, além dos detalhes de cada uma quando selecionada.  
+As informações ficam salvas em cache e são mostradas offline.
 
 
-*TheMealDB*	
-
-Documentação: https://www.themealdb.com/api.php   
-Informações a serem apresentadas:  
-  -Lista das refeições mais recentes  
-  -Detalhes das refeições  
-  -Refeições de forma aleatória
+*Créditos:* Icon made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a>
