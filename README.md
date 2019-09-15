@@ -21,4 +21,4 @@ As informações ficam salvas em cache e são mostradas offline.
 ![prototipo](https://user-images.githubusercontent.com/19494218/64926155-879ea000-d7d0-11e9-8db9-a60e63be28b6.PNG)
 
 
-*Créditos:* Icon made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a>
+*Créditos:* Icon made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a>
