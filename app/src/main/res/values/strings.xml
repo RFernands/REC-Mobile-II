@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">REC-Mobile-II</string>
+    <string name="app_name">Meals</string>
+    <string name="latests_meals">Latests Meals</string>
 </resources>
