@@ -19,6 +19,8 @@ class MealsListActivity : AppCompatActivity(), MealsListContract.View {
         setContentView(R.layout.activity_meals_list)
 
         latestMealsRV()
+
+        swiperefresh.setOnRefreshListener { latestMealsRV() }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -67,5 +69,7 @@ class MealsListActivity : AppCompatActivity(), MealsListContract.View {
 
         rvMeals.adapter = adapter
         rvMeals.layoutManager = LinearLayoutManager(this)
+
+        swiperefresh.isRefreshing = false
     }
 }

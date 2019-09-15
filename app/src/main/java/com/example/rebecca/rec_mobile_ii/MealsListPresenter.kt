@@ -4,6 +4,7 @@ import android.content.Context
 import com.example.rebecca.rec_mobile_ii.entities.Meal
 import com.example.rebecca.rec_mobile_ii.entities.MealList
 import com.example.rebecca.rec_mobile_ii.others.RetrofitInicializer
+import com.example.rebecca.rec_mobile_ii.repository.MealsRepository
 import io.paperdb.Paper
 import retrofit2.Call
 import retrofit2.Callback
@@ -13,93 +14,37 @@ class MealsListPresenter(val context: Context, val view: MealsListContract.View)
 
     override fun LatestMeals(){
 
+        val repository = MealsRepository(context)
+
         view.showLoading()
 
-        Paper.init(context)
-        var latestsMeals: List<Meal>? = null
-
-        val mealsService = RetrofitInicializer().createMealsService()
-
-        val call = mealsService.getLatestMeals()
-
-        call.enqueue(object : Callback<MealList> {
-            override fun onFailure(call: Call<MealList>, t: Throwable) {
-                latestsMeals = Paper.book().read("LatestMeals")
-                if (latestsMeals != null){
-                    view.showMessage("Offline Meals.")
-                    view.hideLoading()
-                    view.showList(latestsMeals!!)
-                } else{
-                    view.hideLoading()
-                    view.showMessage("No internet.")
-                }
-            }
-
-            override fun onResponse(call: Call<MealList>, response: Response<MealList>) {
-                latestsMeals = response.body()?.meals
-
-                if(latestsMeals != null){
-                    Paper.book().write("LatestMeals", latestsMeals)
-                    view.hideLoading()
-                    view.showList(latestsMeals!!)
-                } else {
-                    latestsMeals = Paper.book().read("LatestMeals")
-                    if (latestsMeals != null){
-                        view.showMessage("Offline Meals.")
-                        view.hideLoading()
-                        view.showList(latestsMeals!!)
-                    } else{
-                        view.hideLoading()
-                        view.showMessage("Can't find any meal.")
-                    }
-                }
-            }
-        })
+        repository.getLatestMeals(
+            onSuccess = { meals, cachedData ->
+            view.hideLoading()
+            if(cachedData) view.showMessage("Offline Meals.")
+            view.showList(meals)
+        },
+            onFailure = {
+                view.hideLoading()
+                view.showMessage("Can't find any meal.")
+            })
     }
 
     override fun RandomMeals() {
 
+        val repository = MealsRepository(context)
+
         view.showLoading()
 
-        Paper.init(context)
-        var randomMeal: List<Meal>? = null
-
-        val mealsService = RetrofitInicializer().createMealsService()
-
-        val call = mealsService.getRandomMeals()
-
-        call.enqueue(object : Callback<MealList> {
-            override fun onFailure(call: Call<MealList>, t: Throwable) {
-                randomMeal = Paper.book().read("RandomMeal")
-                if (randomMeal != null){
-                    view.showMessage("Offline Meals.")
-                    view.hideLoading()
-                    view.showList(randomMeal!!)
-                } else{
-                    view.hideLoading()
-                    view.showMessage("No internet.")
-                }
-            }
-
-            override fun onResponse(call: Call<MealList>, response: Response<MealList>) {
-                randomMeal = response.body()?.meals
-
-                if(randomMeal != null){
-                    Paper.book().write("RandomMeal", randomMeal)
-                    view.hideLoading()
-                    view.showList(randomMeal!!)
-                } else {
-                    randomMeal = Paper.book().read("RandomMeal")
-                    if (randomMeal != null){
-                        view.showMessage("Offline Meals.")
-                        view.hideLoading()
-                        view.showList(randomMeal!!)
-                    } else{
-                        view.hideLoading()
-                        view.showMessage("Can't find any meal.")
-                    }
-                }
-            }
-        })
+        repository.getRandomMeal(
+            onSuccess = { meals, cachedData ->
+                view.hideLoading()
+                if(cachedData) view.showMessage("Offline Meals.")
+                view.showList(meals)
+            },
+            onFailure = {
+                view.hideLoading()
+                view.showMessage("Can't find any meal.")
+            })
     }
 }
