@@ -11,6 +11,6 @@ interface MealsListContract {
 
     interface Presenter {
         fun LatestMeals()
-        //fun RandomMeals()
+        fun RandomMeals()
     }
 }
