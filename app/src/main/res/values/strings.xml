@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Meals</string>
+    <string name="app_name">Recipes</string>
     <string name="latests_meals">Latests Meals</string>
     <string name="random">Random</string>
     <string name="latests">Latests</string>
