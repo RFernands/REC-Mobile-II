@@ -1,10 +1,7 @@
 package com.example.rebecca.rec_mobile_ii.entities
 import java.io.Serializable
 
-data class Meal (val idMeal: String,
-                 val strMeal: String,
-                 val strCategory: String,
-                 val strArea: String,
+data class Meal (val strMeal: String,
                  val strInstructions: String,
                  val strMealThumb: String,
 

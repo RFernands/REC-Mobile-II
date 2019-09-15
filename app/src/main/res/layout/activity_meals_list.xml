@@ -12,11 +12,11 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/meals"
-            android:textSize="27sp"
+            android:text="@string/latests_meals"
+            android:textSize="20sp"
             android:textAlignment="center"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="16dp"/>
 
     <android.support.v7.widget.RecyclerView
             android:id="@+id/rvMeals"
