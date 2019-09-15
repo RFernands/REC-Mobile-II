@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context=".MealsListActivity"
+              tools:context=".scenarios.meals_list.MealsListActivity"
               android:layout_marginLeft="16dp"
               android:layout_marginRight="16dp"
               android:layout_marginBottom="6dp">

@@ -13,7 +13,7 @@
             android:layout_marginTop="22dp"
             android:orientation="vertical"
             android:paddingBottom="16dp"
-            tools:context=".MealDetailsActivity">
+            tools:context=".scenarios.meal_details.MealDetailsActivity">
 
         <ImageView
                 android:layout_width="match_parent"

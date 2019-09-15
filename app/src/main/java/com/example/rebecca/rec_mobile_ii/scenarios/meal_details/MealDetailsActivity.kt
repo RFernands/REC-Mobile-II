@@ -1,7 +1,8 @@
-package com.example.rebecca.rec_mobile_ii
+package com.example.rebecca.rec_mobile_ii.scenarios.meal_details
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.rebecca.rec_mobile_ii.R
 import com.example.rebecca.rec_mobile_ii.entities.Meal
 import com.example.rebecca.rec_mobile_ii.others.GlideApp
 import kotlinx.android.synthetic.main.activity_meal_details.*

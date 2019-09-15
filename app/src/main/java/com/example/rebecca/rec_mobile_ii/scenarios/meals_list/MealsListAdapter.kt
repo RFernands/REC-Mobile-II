@@ -1,6 +1,7 @@
-package com.example.rebecca.rec_mobile_ii
+package com.example.rebecca.rec_mobile_ii.scenarios.meals_list
 
 import android.content.Context
+import com.example.rebecca.rec_mobile_ii.R
 import com.example.rebecca.rec_mobile_ii.entities.Meal
 import com.example.rebecca.rec_mobile_ii.others.GlideApp
 import com.xwray.groupie.GroupAdapter

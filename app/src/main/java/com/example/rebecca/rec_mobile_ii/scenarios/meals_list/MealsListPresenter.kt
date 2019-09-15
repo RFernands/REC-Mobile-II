@@ -1,16 +1,10 @@
-package com.example.rebecca.rec_mobile_ii
+package com.example.rebecca.rec_mobile_ii.scenarios.meals_list
 
 import android.content.Context
-import com.example.rebecca.rec_mobile_ii.entities.Meal
-import com.example.rebecca.rec_mobile_ii.entities.MealList
-import com.example.rebecca.rec_mobile_ii.others.RetrofitInicializer
 import com.example.rebecca.rec_mobile_ii.repository.MealsRepository
-import io.paperdb.Paper
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
-class MealsListPresenter(val context: Context, val view: MealsListContract.View) : MealsListContract.Presenter {
+class MealsListPresenter(val context: Context, val view: MealsListContract.View) :
+    MealsListContract.Presenter {
 
     override fun LatestMeals(){
 

@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="43" />
+                                                <entry key="scalingPercent" value="51" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -34,8 +34,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ceffb1" />
-                                      <entry key="foregroundImage" value="C:\Users\Rebecca\Desktop\recipe-book.png" />
+                                      <entry key="backgroundColor" value="f07c4c" />
+                                      <entry key="foregroundImage" value="C:\Users\Rebecca\Desktop\cook-book.svg" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -76,12 +76,13 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="height" value="30" />
-                            <entry key="outputName" value="ic_back" />
+                            <entry key="height" value="442" />
+                            <entry key="outputName" value="ic_cook_book" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="C:\Users\Rebecca\Downloads\recipe-book.svg" />
-                            <entry key="width" value="30" />
+                            <entry key="sourceFile" value="C:\Users\Rebecca\Desktop\cook-book.svg" />
+                            <entry key="width" value="442" />
                           </map>
                         </option>
                       </PersistentState>
