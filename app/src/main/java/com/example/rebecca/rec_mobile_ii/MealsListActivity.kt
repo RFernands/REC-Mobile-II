@@ -36,13 +36,13 @@ class MealsListActivity : AppCompatActivity(), MealsListContract.View {
 
     private fun latestMealsRV() {
         typeOfMeals.text = "Latest Meals"
-        val presenter: MealsListContract.Presenter = MealsListPresenter(this)
+        val presenter: MealsListContract.Presenter = MealsListPresenter(this,this)
         presenter.LatestMeals()
     }
 
     private fun randomMealRV() {
         typeOfMeals.text = "Random Meal"
-        val presenter: MealsListContract.Presenter = MealsListPresenter(this)
+        val presenter: MealsListContract.Presenter = MealsListPresenter(this,this)
         presenter.RandomMeals()
     }
 
